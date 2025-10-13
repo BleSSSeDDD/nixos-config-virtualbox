@@ -6,4 +6,8 @@ create VM in VirtualBox using minimalistic iso from official site: https://nixos
 
 execute installation script:
 
-sudo curl -o /mnt/etc/nixos/configuration.nix "https://raw.githubusercontent.com/BleSSSeDDD/nixos-config-blessseddd/refs/heads/main/install.sh"
+sudo curl -o install.sh "https://raw.githubusercontent.com/BleSSSeDDD/nixos-config-blessseddd/refs/heads/main/install.sh"
+
+sudo chmod a+x install.sh
+
+sudo ./install.sh
