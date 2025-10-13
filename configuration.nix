@@ -24,8 +24,7 @@
     file pciutils usbutils
   ];
 
-  # VirtualBox Guest Additions
-  virtualisation.virtualbox.guest.enable = true;
+virtualisation.virtualbox.guest.enable = true;
 
   services.xserver = {
     enable = true;
