@@ -2,7 +2,8 @@
 
 {
   imports = [ ./hardware-configuration.nix ];
-  system.stateVersion = "25.05"; 
+
+  system.stateVersion = "25.05";
 
   boot.loader.grub = {
     enable = true;
@@ -10,54 +11,39 @@
     useOSProber = true;
   };
 
-  boot.initrd.checkJournalingFS = false;
-  virtualisation.virtualbox.guest.enable = true;
-  
-  services.xserver.enable = false;
-  
-  services.displayManager = {
-    sddm.enable = true;
-    defaultSession = "plasmawayland";
-  };
-  
-  services.desktopManager.plasma6.enable = true;  # Plasma 6 с нативным Wayland
-
-  programs.plasma.enable = true;
-  security.polkit.enable = true;
-
-  networking.hostName = "nixos-dev";
+  networking.hostName = "nixos-vm";
   networking.networkmanager.enable = true;
 
-  users.users.dev = {
+  users.users.nixos = {
     isNormalUser = true;
-    description = "Developer";
-    extraGroups = [ "networkmanager" "wheel" "video" "input" ];
-    initialPassword = "12345678";
+    extraGroups = [ "wheel" "networkmanager" "video" ];
+    initialPassword = "nixos";
   };
 
   security.sudo.wheelNeedsPassword = false;
 
-  environment.systemPackages = with pkgs; [
-    inetutils iproute2 bind dnsutils
-    vim wget curl git htop tree
-    file pciutils usbutils
-  ];
+  virtualisation.virtualbox.guest.enable = true;
 
-  hardware.opengl = {
+  hardware.opengl.enable = true;
+
+  services.xserver = {
     enable = true;
-    driSupport = true;
+    displayManager = {
+      sddm.enable = true;
+      autoLogin = {
+        enable = true;
+        user = "nixos";
+      };
+      defaultSession = "plasma";
+    };
+    desktopManager.plasma5.enable = true;
   };
 
   sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  services.pipewire = {
-    enable = true;
-    audio.enable = true;
-    pulse.enable = true;
-    alsa.enable = true;
-  };
+  hardware.pulseaudio.enable = true;
 
-  services.printing.enable = true;
-  services.bluetooth.enable = true;
-  programs.bash.enable = true;
+  environment.systemPackages = with pkgs; [
+    vim wget curl git htop
+    file pciutils usbutils
+  ];
 }
