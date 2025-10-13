@@ -54,7 +54,11 @@
                                 <p>Boot into the Live environment and execute:</p>
                                 <div class="code-block">
     sudo curl -o install.sh "https://raw.githubusercontent.com/BleSSSeDDD/nixos-config-blessseddd/refs/heads/main/install.sh"
+                                </div>
+                                <div class="code-block">
     sudo chmod +x install.sh
+                                </div>
+                                <div class="code-block">
     sudo ./install.sh
                                 </div>
                             </div>
