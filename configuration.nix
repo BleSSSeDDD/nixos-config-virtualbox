@@ -4,7 +4,11 @@
   imports = [ ./hardware-configuration.nix ];
   system.stateVersion = "25.05";
 
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.grub = {
+   enable = true;
+   device = "/dev/sda";
+  };
+
   networking.hostName = "nixos-dev";
   networking.networkmanager.enable = true;
 
