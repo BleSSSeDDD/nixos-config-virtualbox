@@ -20,11 +20,10 @@
     file pciutils usbutils
   ];
 
-  virtualisation.virtualbox.guest = {
-    enable = true;
-  };
+  # VirtualBox Guest Additions
+  virtualisation.virtualbox.guest.enable = true;
 
-    services.xserver = {
+  services.xserver = {
     enable = true;
     displayManager = {
       lightdm.enable = true;
@@ -32,12 +31,12 @@
         enable = true;
         user = "dev";
       };
-      defaultSession = "lxqt";
+      defaultSession = "plasma";
     };
     desktopManager = {
-      lxqt.enable = true;
+      plasma5.enable = true;
     };
-    videoDrivers = [ "virtualbox" "modesetting" ];
+    videoDrivers = [ "virtualbox" ];
   };
 
   hardware.opengl.enable = true;
