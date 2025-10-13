@@ -15,7 +15,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    net-tools iproute2 bind dnsutils
+    inetutils iproute2 bind dnsutils
     vim wget curl git htop tree
     file pciutils usbutils
     virtualbox-guest-additions
@@ -33,10 +33,10 @@
         enable = true;
         user = "dev";
       };
-      defaultSession = "lxqt";  # ← ИЗМЕНИЛ
+      defaultSession = "lxqt";
     };
     desktopManager = {
-      lxqt.enable = true;  # ← ИЗМЕНИЛ
+      lxqt.enable = true;
     };
     videoDrivers = [ "virtualbox" "modesetting" ];
   };
