@@ -17,7 +17,7 @@
   users.users.nixos = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "video" ];
-    initialPassword = "nixos";
+    initialPassword = "12345678";
   };
 
   security.sudo.wheelNeedsPassword = false;
@@ -40,7 +40,6 @@
   };
 
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim wget curl git htop
