@@ -5,6 +5,7 @@ Installation:
 create VM in VirtualBox using minimalistic iso from official site: https://nixos.org/download
 
 sudo parted /dev/sda -- mklabel msdos
+
 sudo parted /dev/sda -- mkpart primary 1MiB 100%
 
 sudo mkfs.ext4 -L nixos /dev/sda1
@@ -19,4 +20,4 @@ sudo nixos-generate-config --root /mnt
 
 sudo nixos-install
 
-#dont forget to remove LiveCD
+#dont forget to remove LiveCD from VirtualBox
