@@ -26,17 +26,18 @@
     x11 = true;
   };
 
-  services.xserver = {
+    services.xserver = {
     enable = true;
     displayManager = {
-      lightdm.enable = true; 
+      lightdm.enable = true;
       autoLogin = {
         enable = true;
         user = "dev";
       };
+      defaultSession = "lxqt";  # ← ИЗМЕНИЛ
     };
     desktopManager = {
-      lxde.enable = true;
+      lxqt.enable = true;  # ← ИЗМЕНИЛ
     };
     videoDrivers = [ "virtualbox" "modesetting" ];
   };
