@@ -39,8 +39,6 @@
     desktopManager.plasma5.enable = true;
   };
 
-  sound.enable = true;
-
   environment.systemPackages = with pkgs; [
     vim wget curl git htop
     file pciutils usbutils
