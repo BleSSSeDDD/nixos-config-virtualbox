@@ -1,6 +1,8 @@
 Configuration file for VirtualBox NixOS machine
 
-Instalation: 
+Installation: 
+
+create VM in VirtualBox using minimalistic iso from official site: https://nixos.org/download
 
 sudo parted /dev/sda -- mklabel msdos
 sudo parted /dev/sda -- mkpart primary 1MiB 100%
