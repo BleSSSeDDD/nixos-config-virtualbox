@@ -18,7 +18,6 @@
     inetutils iproute2 bind dnsutils
     vim wget curl git htop tree
     file pciutils usbutils
-    virtualbox-guest-additions
   ];
 
   virtualisation.virtualbox.guest = {
