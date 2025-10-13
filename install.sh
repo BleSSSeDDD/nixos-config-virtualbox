@@ -1,5 +1,3 @@
-#!/bin/bash
-
 sudo parted /dev/sda -- mklabel msdos
 
 sudo parted /dev/sda -- mkpart primary 1MiB 100%
