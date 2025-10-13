@@ -43,14 +43,12 @@
                     <div class="section">
                         <h2>🚀 Quick Installation</h2>
                         <div class="step">
-                            <div class="step-number">1</div>
                             <div>
                                 <h3>Create Virtual Machine</h3>
                                 <p>Create a new VM in VirtualBox using the minimal NixOS ISO from the <a href="https://nixos.org/download" target="_blank">official website</a></p>
                             </div>
                         </div>
                         <div class="step">
-                            <div class="step-number">2</div>
                             <div>
                                 <h3>Run Installation Script</h3>
                                 <p>Boot into the Live environment and execute:</p>
@@ -62,7 +60,6 @@
                             </div>
                         </div>
                         <div class="step">
-                            <div class="step-number">3</div>
                             <div>
                                 <h3>Final Setup</h3>
                                 <p>Remove the Live CD from VirtualBox and reboot. Your system will be ready to use! 🎉</p>
