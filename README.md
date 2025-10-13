@@ -8,6 +8,6 @@ execute installation script:
 
 sudo curl -o install.sh "https://raw.githubusercontent.com/BleSSSeDDD/nixos-config-blessseddd/refs/heads/main/install.sh"
 
-sudo chmod a+x install.sh
+sudo chmod +x install.sh
 
 sudo ./install.sh
