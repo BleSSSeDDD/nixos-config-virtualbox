@@ -7,7 +7,7 @@
 
   boot.loader.grub = {
     enable = true;
-    device = "nodev";
+    device = "/dev/sda";
     useOSProber = true;
   };
 
