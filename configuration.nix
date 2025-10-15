@@ -40,6 +40,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    firefox
     vim wget curl git htop
     file pciutils usbutils
   ];
