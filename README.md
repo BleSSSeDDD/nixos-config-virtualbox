@@ -84,7 +84,7 @@
                             <div class="feature-card">
                                 <h3>User Setup</h3>
                                 <ul>
-                                    <li>Username: dev</li>
+                                    <li>Username: nixos</li>
                                     <li>Default password: 12345678</li>
                                     <li>Groups: wheel, networkmanager, video</li>
                                 </ul>
